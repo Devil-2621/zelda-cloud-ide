@@ -1,8 +1,7 @@
-# Zelda Cloud IDE
-
 <p align="center">
   <img src="./public/zelda-logo.png" alt="Zelda logo" width="140" />
 </p>
+# Zelda Cloud IDE
 
 Zelda is a browser-based cloud IDE focused on collaborative coding and AI-assisted development. It combines a modern editor experience, real-time data sync, and background AI workflows in a single Next.js application.
 
