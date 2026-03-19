@@ -118,7 +118,7 @@ export const processMessage = inngest.createFunction(
         name: "title-generator",
         system: TITLE_GENERATOR_SYSTEM_PROMPT,
         model: openai({
-					model: 'nvidia/nemotron-3-super-120b-a12b:free',
+					model: 'arcee-ai/trinity-large-preview:free',
 					baseUrl: 'https://openrouter.ai/api/v1',
 					apiKey: process.env.OPENROUTER_AI_API_KEY,
 					defaultParameters: { temperature: 0, max_completion_tokens: 50 },
@@ -158,10 +158,10 @@ export const processMessage = inngest.createFunction(
       description: "An expert AI coding assistant",
       system: systemPrompt,
       model: openai({
-        model: 'openrouter/hunter-alpha',
+        model: 'nvidia/nemotron-3-super-120b-a12b:free',
         baseUrl: 'https://openrouter.ai/api/v1',
         apiKey: process.env.OPENROUTER_AI_API_KEY,
-        defaultParameters: { temperature: 0, max_completion_tokens: 50 },
+        defaultParameters: { temperature: 0, max_completion_tokens: 16000 },
       }),
        tools: [
         createListFilesTool({ internalKey, projectId, messageId }),
