@@ -81,7 +81,7 @@ export async function POST(request: Request) {
       .replace("{lineNumber}", lineNumber.toString());
 
     const { text } = await generateText({
-      model: openrouter('arcee-ai/trinity-large-preview:free'),
+      model: openrouter('google/gemma-4-31b-it:free'),
       prompt,
     });
 
