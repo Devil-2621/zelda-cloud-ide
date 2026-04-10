@@ -121,7 +121,7 @@ export const processMessage = inngest.createFunction(
 					model: 'google/gemma-4-31b-it:free',
 					baseUrl: 'https://openrouter.ai/api/v1',
 					apiKey: process.env.OPENROUTER_AI_API_KEY,
-					defaultParameters: { temperature: 0, max_completion_tokens: 50 },
+					defaultParameters: { temperature: 0.3, max_completion_tokens: 100 },
 				}),
        });
 
@@ -158,10 +158,10 @@ export const processMessage = inngest.createFunction(
       description: "An expert AI coding assistant",
       system: systemPrompt,
       model: openai({
-        model: 'nvidia/nemotron-3-super-120b-a12b:free',
+        model: 'google/gemma-4-31b-it:free',
         baseUrl: 'https://openrouter.ai/api/v1',
         apiKey: process.env.OPENROUTER_AI_API_KEY,
-        defaultParameters: { temperature: 0, max_completion_tokens: 16000 },
+        defaultParameters: { temperature: 0.3, max_completion_tokens: 24000 },
       }),
        tools: [
         createListFilesTool({ internalKey, projectId, messageId }),
