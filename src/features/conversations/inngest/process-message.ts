@@ -118,7 +118,7 @@ export const processMessage = inngest.createFunction(
         name: "title-generator",
         system: TITLE_GENERATOR_SYSTEM_PROMPT,
         model: openai({
-					model: 'arcee-ai/trinity-large-preview:free',
+					model: 'google/gemma-4-31b-it:free',
 					baseUrl: 'https://openrouter.ai/api/v1',
 					apiKey: process.env.OPENROUTER_AI_API_KEY,
 					defaultParameters: { temperature: 0, max_completion_tokens: 50 },
