@@ -39,7 +39,7 @@ export const demoGenerate = inngest.createFunction(
 
     await step.run("generate-text", async () => {
       return await generateText({
-        model: openrouter('nvidia/nemotron-3-super-120b-a12b:free'),
+        model: openrouter('google/gemma-4-31b-it:free'),
         prompt: finalPrompt,
         experimental_telemetry: {
           isEnabled: true,
